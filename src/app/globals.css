@@ -194,7 +194,7 @@ a:focus-visible {
   border: 0;
   border-radius: 999px;
   background: transparent;
-  color: #939b92;
+  color: #5b6f5d;
   cursor: pointer;
   font-size: 12px;
   transition: color 160ms ease, background 160ms ease, box-shadow 160ms ease;
@@ -371,7 +371,7 @@ a:focus-visible {
 .completion-message {
   min-height: 17px;
   margin: 13px 0 0;
-  color: #99a197;
+  color: #5b6f5d;
   font-size: 11px;
   letter-spacing: 0.01em;
   text-align: center;

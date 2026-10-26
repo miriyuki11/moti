@@ -103,7 +103,11 @@ export function TimerCard({
                 <svg viewBox="0 0 20 20" aria-hidden="true">
                   <path d="M6.6 4.4a.7.7 0 0 1 1.1-.6l8.1 5.5a.8.8 0 0 1 0 1.4l-8.1 5.5a.7.7 0 0 1-1.1-.6V4.4Z" />
                 </svg>
-                {remainingMs === totalMs ? "集中をはじめる" : "つづける"}
+                {remainingMs === totalMs
+                  ? mode === "focus"
+                    ? "集中をはじめる"
+                    : `${POMODORO_MODES[mode].label}をはじめる`
+                  : "つづける"}
               </>
             )}
           </button>

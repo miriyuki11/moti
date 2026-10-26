@@ -54,13 +54,15 @@ export function usePomodoroTimer() {
   };
 
   const toggleTimer = () => {
-    setCompletionMessage("");
     if (endsAt !== null) {
-      setRemainingMs(Math.max(0, endsAt - Date.now()));
+      const nextRemaining = endsAt - Date.now();
+      if (nextRemaining <= 0) return;
+      setRemainingMs(nextRemaining);
       setEndsAt(null);
     } else {
       setEndsAt(Date.now() + remainingMs);
     }
+    setCompletionMessage("");
   };
 
   const resetTimer = () => {
